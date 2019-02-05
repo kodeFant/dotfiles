@@ -21,22 +21,25 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/composer
 
+    # Makes sure NVM is installed
+    zgen load lukechilds/zsh-nvm
+
     # other plugins
     zgen load zdharma/fast-syntax-highlighting
     zgen load zsh-users/zsh-history-substring-search
     zgen load MichaelAquilina/zsh-you-should-use
     zgen load arzzen/calc.plugin.zsh
+
     #  Opens your current repo on github, in your current branch.
     zgen load peterhurford/git-it-on.zsh
-    # Adds a tool to generate ZSH completion functions for programs missing them by parsing their --help output. Note that this doesn't happen dynamically, you'll have to explicitly run it to create a completion for each command missing one.
 
     # completions
     zgen load zsh-users/zsh-completions src
     zgen load zsh-users/zsh-autosuggestions
     zgen load jessarcher/zsh-artisan
     zgen load changyuheng/zsh-interactive-cd
+    # Adds a tool to generate ZSH completion functions for programs missing them by parsing their --help output. Note that this doesn't happen dynamically, you'll have to explicitly run it to create a completion for each command missing one.
     zgen load RobSis/zsh-completion-generator 
-
     # theme
     zgen load denysdovhan/spaceship-prompt
     
