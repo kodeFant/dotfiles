@@ -48,7 +48,16 @@ if ! zgen saved; then
     zgen save
 fi
 
+#Hardcore mode for aliases
 export YSU_HARDCORE=1
+
+# If System Is Linux
+if [ "$system_type" = "Linux" ]; then
+    # Adds Linuxbrew paths
+    export PATH="${HOME}/.linuxbrew/bin:${PATH}"
+    export MANPATH="${HOME}/.linuxbrew/share/man:${MANPATH}"
+    export INFOPATH="${HOME}/.linuxbrew/share/info:${INFOPATH}"
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 cd ~/kode

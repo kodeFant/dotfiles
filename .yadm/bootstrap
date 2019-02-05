@@ -1,10 +1,13 @@
 #!/bin/bash
 
 # Install Zgen
-git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+if [ ! -d "${HOME}/.zgen" ]; then
+    echo "Installing Zgen" 
+    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+elif [ -d "${HOME}/.zgen" ]; then
+    echo "Zgen already installed" 
+fi
 
-
-#!/bin/bash
 
 system_type=$(uname -s)
 
