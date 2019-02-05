@@ -54,12 +54,20 @@ export YSU_HARDCORE=1
 # Enable GPG
 export GPG_TTY=$(tty)
 
+system_type=$(uname -s)
+
 # If System Is Linux
 if [ "$system_type" = "Linux" ]; then
     # Adds Linuxbrew paths
     export PATH="${HOME}/.linuxbrew/bin:${PATH}"
     export MANPATH="${HOME}/.linuxbrew/share/man:${MANPATH}"
     export INFOPATH="${HOME}/.linuxbrew/share/info:${INFOPATH}"
+fi
+
+# If System Is Mac
+if [ "$system_type" = "Darwin" ]; then
+    # Adds Homebrew path
+    export PATH="/usr/local/sbin:$PATH"
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

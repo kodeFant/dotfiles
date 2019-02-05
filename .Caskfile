@@ -1,7 +1,32 @@
 # Cask files are only for OS X
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+
+# Web Development
+cask "visual-studio-code-insiders"
+cask "graphql-playground"
+cask "sequel-pro"
+
+# Nettlesere
+cask "google-chrome"
+cask "firefox-developer-edition"
+
+# Terminal
+cask "hyper"
 
 # FiraCode NerdFont
 cask "font-firacode-nerd-font"
 cask "font-firacode-nerd-font-mono"
+
+# Image Editor
+cask "gimp"
+
+# Video Player
+cask "vlc"
+
+# Window Sizing Manager
+cask "spectacle"
+
+#Email
+cask "mailspring"

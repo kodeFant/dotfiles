@@ -11,6 +11,8 @@ fi
 
 system_type=$(uname -s)
 
+
+# If system is OS X
 if [ "$system_type" = "Darwin" ]; then
 
   # install homebrew if it's missing
@@ -25,8 +27,15 @@ if [ "$system_type" = "Darwin" ]; then
     brew bundle --file="${HOME}/.Caskfile"
   fi
 
+  # After Brewfile install
+  ## Install Laravel Valet for Mac
+  echo "Installing Laravel Valet"
+  composer global require laravel/valet
+  valet install
+
 fi
 
+# If system is Linux
 if [ "$system_type" = "Linux" ]; then
 
   # install homebrew if it's missing
@@ -40,4 +49,14 @@ if [ "$system_type" = "Linux" ]; then
     brew bundle --global
   fi
 
+  # After Brewfile install
+ echo "Installing Laravel Valet for Linux" 
+  composer global require cpriego/valet-linux
+  valet install
 fi
+
+# Install fzf
+$(brew --prefix)/opt/fzf/install
+
+# Decrypt files
+yadm decrypt
