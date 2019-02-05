@@ -1,0 +1,5 @@
+[user]
+	email = lars.lillo@gmail.com
+	name = Lars Lillo Ulvestad
+[core]
+	editor = code --wait
