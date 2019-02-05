@@ -48,8 +48,11 @@ if ! zgen saved; then
     zgen save
 fi
 
-#Hardcore mode for aliases
+# Hardcore mode for aliases
 export YSU_HARDCORE=1
+
+# Enable GPG
+export GPG_TTY=$(tty)
 
 # If System Is Linux
 if [ "$system_type" = "Linux" ]; then

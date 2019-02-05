@@ -1,0 +1,7 @@
+# Cask files are only for OS X
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+
+# FiraCode NerdFont
+cask "font-firacode-nerd-font"
+cask "font-firacode-nerd-font-mono"
