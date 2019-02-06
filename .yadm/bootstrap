@@ -28,11 +28,12 @@ if [ "$system_type" = "Darwin" ]; then
   fi
 
   # After Brewfile install
-  ## Install Laravel Valet for Mac
-  echo "Installing Laravel Valet"
-  composer global require laravel/valet
-  valet install
-
+  if [ ! -f "/usr/local/bin/valet" ]; then 
+    ## Install Laravel Valet for Mac
+    echo "Installing Laravel Valet"
+    composer global require laravel/valet
+    valet install
+  fi
 fi
 
 # If system is Linux
@@ -63,4 +64,8 @@ if [ ! -f ~/.fzf.zsh ]; then
 fi
 
 # Decrypt files
-yadm decrypt
+read -p "Decrypt personal files (y/n)?" choice
+case "$choice" in 
+  y|Y ) yadm decrypt ;;
+esac
+
