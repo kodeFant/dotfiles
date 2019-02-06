@@ -49,14 +49,18 @@ if [ "$system_type" = "Linux" ]; then
     brew bundle --global
   fi
 
-  # After Brewfile install
- echo "Installing Laravel Valet for Linux" 
-  composer global require cpriego/valet-linux
-  valet install
+  if [ ! -f "/usr/local/bin/valet" ]; then
+    echo "Installing Laravel Valet for Linux" 
+    composer global require cpriego/valet-linux
+    valet install
+  fi
+
 fi
 
 # Install fzf
-$(brew --prefix)/opt/fzf/install
+if [ ! -f ~/.fzf.zsh ]; then
+  $(brew --prefix)/opt/fzf/install
+fi
 
 # Decrypt files
 yadm decrypt
