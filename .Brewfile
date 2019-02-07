@@ -23,5 +23,4 @@ brew 'mariadb'
 brew 'php'
 
 #JavaScript
-brew 'nvm'
 brew 'yarn', args: ['without-node']

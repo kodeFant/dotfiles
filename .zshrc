@@ -1,8 +1,11 @@
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
-#Autoupdate
-zgen load unixorn/autoupdate-zgen
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+alias code=code-insiders
 
 # if the init scipt doesn't exist
 if ! zgen saved; then
@@ -23,6 +26,8 @@ if ! zgen saved; then
 
     # Makes sure NVM is installed
     zgen load lukechilds/zsh-nvm
+    # Install Yarn if not already installed
+    type yarn  >/dev/null 2>&1 || { echo >&2 "Installing yarn"; brew install yarn;  }
 
     # other plugins
     zgen load zdharma/fast-syntax-highlighting
@@ -42,20 +47,19 @@ if ! zgen saved; then
     zgen load RobSis/zsh-completion-generator 
     # theme
     zgen load denysdovhan/spaceship-prompt
-    
 
+    #Autoupdate
+    zgen load unixorn/autoupdate-zgen
+    
     # save all to init script
     zgen save
 fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Hardcore mode for aliases
 export YSU_HARDCORE=1
 
-# Enable GPG
-export GPG_TTY=$(tty)
-
 system_type=$(uname -s)
-
 # If System Is Linux
 if [ "$system_type" = "Linux" ]; then
     # Adds Linuxbrew paths
@@ -73,5 +77,7 @@ if [ "$system_type" = "Darwin" ]; then
     export PATH="/usr/local/sbin:$PATH"
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Enable GPG
+export GPG_TTY=$(tty)
+
 cd ~/kode
