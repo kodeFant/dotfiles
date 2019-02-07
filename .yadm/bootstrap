@@ -72,3 +72,7 @@ esac
 if [ ! -d "${HOME}/kode" ]; then
   mkdir ~/kode
 fi
+
+echo "Download and install LastPass: https://www.lastpass.com/"
+echo "Download and install GitFTP-Deploy: https://gitftp-deploy.com/"
+echo "Download and install Cold Turkey: https://getcoldturkey.com/"

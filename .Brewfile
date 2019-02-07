@@ -20,7 +20,7 @@ brew 'gnupg'
 brew 'composer'
 brew 'nginx'
 brew 'mariadb'
-brew 'php72'
+brew 'php'
 
 #JavaScript
 brew 'nvm'
