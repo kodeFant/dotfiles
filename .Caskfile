@@ -22,8 +22,9 @@ cask "font-firacode-nerd-font-mono"
 # Image Editor
 cask "gimp"
 
-# Video Player
+# Entertainment
 cask "vlc"
+cask "spotify"
 
 # Window Sizing Manager
 cask "spectacle"

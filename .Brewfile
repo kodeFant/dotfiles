@@ -24,4 +24,5 @@ brew 'coreutils'
 brew 'gnupg'
 
 #JavaScript
+brew 'nvm'
 brew 'yarn', args: ['without-node']
