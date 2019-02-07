@@ -69,3 +69,6 @@ case "$choice" in
   y|Y ) yadm decrypt ;;
 esac
 
+if [ ! -d "${HOME}/kode" ]; then
+  mkdir ~/kode
+fi

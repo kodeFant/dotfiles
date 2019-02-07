@@ -10,18 +10,17 @@ brew 'zsh-completions'
 # CLI Fuzzy finder
 brew 'fzf'
 
-# Databases
-brew 'mariadb'
-brew 'php72'
-
-# PHP
-brew 'composer'
-
 # Install GNU core utilities (those that come with macOS are outdated)
 brew 'coreutils'
 
 # GPG encryption
 brew 'gnupg'
+
+# LEMP
+brew 'composer'
+brew 'nginx'
+brew 'mariadb'
+brew 'php72'
 
 #JavaScript
 brew 'nvm'
