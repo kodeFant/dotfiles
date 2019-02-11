@@ -63,7 +63,6 @@ system_type=$(uname -s)
 # If System Is Linux
 if [ "$system_type" = "Linux" ]; then
     # Adds Linuxbrew paths
-    echo "Linux System"
     export PATH="${HOME}/.linuxbrew/bin:${PATH}"
     export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
     export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
