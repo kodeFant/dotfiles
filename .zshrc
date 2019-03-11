@@ -5,7 +5,7 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
-alias code=code-insiders
+# alias code=code-insiders
 
 # if the init scipt doesn't exist
 if ! zgen saved; then

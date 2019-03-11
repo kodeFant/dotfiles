@@ -24,3 +24,6 @@ brew 'php'
 
 #JavaScript
 brew 'yarn', args: ['without-node']
+
+#Elm
+brew 'elm'

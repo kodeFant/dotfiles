@@ -4,7 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 # Web Development
-cask "visual-studio-code-insiders"
+cask "visual-studio-code"
 cask "graphql-playground"
 cask "sequel-pro"
 
