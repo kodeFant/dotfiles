@@ -7,6 +7,8 @@ fi
 
 # Aliases
 alias kode="cd ${HOME}/kode"
+alias kodefant="cd ${HOME}/kodefant"
+alias kurs="cd ${HOME}/kurs"
 # alias code=code-insiders
 
 
