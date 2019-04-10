@@ -1,5 +1,7 @@
+
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
+
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -83,5 +85,6 @@ fi
 
 # Enable GPG
 export GPG_TTY=$(tty)
+
 
 cd ~/kode
