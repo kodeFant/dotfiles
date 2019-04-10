@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 # Git
 brew 'git'
 brew 'bash-completion'
+brew 'tree'
 
 # ZSH
 brew 'zsh'
