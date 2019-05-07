@@ -138,7 +138,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-oceans16", "hyper-spotify", "gitrocket"],
+  plugins: ["hyper-oceans16", "hyper-spotify", "gitrocket", "hyper-pane"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

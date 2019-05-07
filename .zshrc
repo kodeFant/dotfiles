@@ -13,7 +13,6 @@ alias kodefant="cd ${HOME}/kodefant"
 alias kurs="cd ${HOME}/kurs"
 # alias code=code-insiders
 
-
 # if the init scipt doesn't exist
 if ! zgen saved; then
     echo "Creating a zgen save"
