@@ -27,8 +27,10 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/ubuntu
     zgen oh-my-zsh plugins/web-search
     zgen oh-my-zsh plugins/extract
+    zgen oh-my-zsh plugins/taskwarrior
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/composer
+    zgen oh-my-zsh plugins/jump
 
     # Makes sure NVM is installed
     zgen load lukechilds/zsh-nvm
@@ -63,7 +65,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Hardcore mode for aliases
-export YSU_HARDCORE=1
+# export YSU_HARDCORE=1
 
 system_type=$(uname -s)
 # If System Is Linux
@@ -80,10 +82,9 @@ fi
 if [ "$system_type" = "Darwin" ]; then
     # Adds Homebrew path
     export PATH="/usr/local/sbin:$PATH"
+    export PATH="/Users/lillo/Library/Android/sdk/platform-tools":$PATH
 fi
 
 # Enable GPG
 export GPG_TTY=$(tty)
 
-
-cd ~/kode
