@@ -5,7 +5,6 @@ tap "homebrew/cask-versions"
 
 # Web Development
 cask "visual-studio-code"
-cask "graphql-playground"
 cask "sequel-pro"
 
 # Nettlesere
@@ -28,6 +27,3 @@ cask "spotify"
 
 # Window Sizing Manager
 cask "spectacle"
-
-#Email
-cask "mailspring"
