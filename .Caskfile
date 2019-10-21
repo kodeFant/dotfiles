@@ -27,3 +27,6 @@ cask "spotify"
 
 # Window Sizing Manager
 cask "spectacle"
+
+# Alfred
+cask "alfred"
