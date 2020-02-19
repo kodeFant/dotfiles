@@ -1,4 +1,4 @@
-
+##########
 # load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
@@ -83,8 +83,15 @@ if [ "$system_type" = "Darwin" ]; then
     # Adds Homebrew path
     export PATH="/usr/local/sbin:$PATH"
     export PATH="/Users/lillo/Library/Android/sdk/platform-tools":$PATH
+    export PATH="$PATH:/Users/lillo/Utils/flutter/bin"
 fi
 
 # Enable GPG
 export GPG_TTY=$(tty)
 
+echo "########################################################"
+echo "#                      kodeFant                        #"
+echo "########################################################"
+echo "Jump Marks:"
+marks
+echo "########################################################"

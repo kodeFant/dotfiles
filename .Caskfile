@@ -3,13 +3,17 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
+# Nettlesere
+cask "google-chrome"
+cask "firefox-developer-edition"
+
 # Web Development
 cask "visual-studio-code"
 cask "sequel-pro"
 
-# Nettlesere
-cask "google-chrome"
-cask "firefox-developer-edition"
+# Design
+cask "gimp"
+cask "figma"
 
 # Terminal
 cask "hyper"
@@ -17,9 +21,6 @@ cask "hyper"
 # FiraCode NerdFont
 cask "font-firacode-nerd-font"
 cask "font-firacode-nerd-font-mono"
-
-# Image Editor
-cask "gimp"
 
 # Entertainment
 cask "vlc"
