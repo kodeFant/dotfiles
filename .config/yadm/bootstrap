@@ -1,0 +1,54 @@
+#!/bin/bash
+echo "Kodefant Dotfiles Bootstrap Script" 
+
+# Install Zgen
+if [ ! -d "${HOME}/.zgen" ]; then
+    echo "Installing Zgen" 
+    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+elif [ -d "${HOME}/.zgen" ]; then
+    echo "Zgen already installed" 
+fi
+
+system_type=$(uname -s)
+
+
+# If system is OS X
+if [ "$system_type" = "Darwin" ]; then
+
+  # install nix if it's missing
+  if ! command -v nix-env >/dev/null 2>&1; then
+    echo "Installing Nix"
+    curl -L https://nixos.org/nix/install | sh
+  fi
+
+fi
+
+# If system is Linux
+if [ "$system_type" = "Linux" ]; then
+
+
+fi
+
+# Make ZSH default shell
+chsh -s /bin/zsh
+
+
+# Install fzf
+if [ ! -f ~/.fzf.zsh ]; then
+  $(brew --prefix)/opt/fzf/install
+fi
+
+# Decrypt files
+read -p "Decrypt personal files (y/n)?" choice
+case "$choice" in 
+  y|Y ) yadm decrypt ;;
+esac
+
+if [ ! -d "${HOME}/kode" ]; then
+  mkdir ~/kode
+fi
+
+open https://www.lastpass.com/
+open https://gitftp-deploy.com/
+open https://getcoldturkey.com/
+echo "Restart your computer for all changes to take Effect"

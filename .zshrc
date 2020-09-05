@@ -7,10 +7,6 @@ if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
 
-# Aliases
-alias kode="cd ${HOME}/kode"
-alias kodefant="cd ${HOME}/kodefant"
-alias kurs="cd ${HOME}/kurs"
 # alias code=code-insiders
 
 # if the init scipt doesn't exist
@@ -31,7 +27,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/colored-man-pages
     zgen oh-my-zsh plugins/composer
     zgen oh-my-zsh plugins/jump
-
+    zgen oh-my-zsh plugins/vi-mode
     # Makes sure NVM is installed
     zgen load lukechilds/zsh-nvm
     # Install Yarn if not already installed
@@ -81,9 +77,8 @@ fi
 # If System Is Mac
 if [ "$system_type" = "Darwin" ]; then
     # Adds Homebrew path
-    export PATH="/usr/local/sbin:$PATH"
-    export PATH="/Users/lillo/Library/Android/sdk/platform-tools":$PATH
-    export PATH="$PATH:/Users/lillo/Utils/flutter/bin"
+    export PATH="/Users/lillo/.emacs.d/bin:$PATH"
+    if [ -e /Users/lillo/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/lillo/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 fi
 
 # Enable GPG
@@ -95,3 +90,12 @@ echo "########################################################"
 echo "Jump Marks:"
 marks
 echo "########################################################"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lillo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lillo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lillo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lillo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export MOB_NEXT_STAY=true
+
